@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+comment_one:
+  #id: 2
   commenter: MyString
   body: MyText
-  post_id: 
+  post: one
 
-two:
+comment_two:
+  #id: 1
   commenter: MyString
   body: MyText
-  post_id: 
+  post: one
