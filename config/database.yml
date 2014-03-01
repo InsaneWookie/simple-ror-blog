@@ -31,7 +31,7 @@ production:
   encoding: UTF-8
   host: localhost
   database: sleepy_savannah
-  username: sleepy_savannah
-  password: sleepy_savannah
+  #username: sleepy_savannah
+  password:
   pool: 5
   timeout: 5000
