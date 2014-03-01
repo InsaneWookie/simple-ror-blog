@@ -55,6 +55,15 @@ SleepySavannah7126::Application.routes.draw do
   #     resources :products
   #   end
   
-  root 'welcome#index'
+  #root 'welcome#index'
+
+    
+  SleepySavannah7126::Application.routes.draw do
+ 
+    resources :posts
+   
+    root to: "welcome#index"
+    
+  end
   
 end
