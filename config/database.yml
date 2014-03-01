@@ -6,10 +6,10 @@
 development:
   adapter: postgresql
   encoding: UTF-8
-  host: localhost
+  #host: localhost
   database: sleepy_savannah_dev
-  username: sleepy_savannah
-  password: sleepy_savannah
+  #username: sleepy_savannah
+  #password: sleepy_savannah
   pool: 5
   timeout: 5000
 
@@ -19,19 +19,19 @@ development:
 test:
   adapter: postgresql
   encoding: UTF-8
-  host: localhost
+  #host: localhost
   database: sleepy_savannah_test
-  username: sleepy_savannah
-  password: sleepy_savannah
+  #username: sleepy_savannah
+  #password: sleepy_savannah
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   encoding: UTF-8
-  host: localhost
+  #host: localhost
   database: sleepy_savannah
   #username: sleepy_savannah
-  password:
+  #password:
   pool: 5
   timeout: 5000
