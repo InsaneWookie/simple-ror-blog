@@ -1,12 +1,11 @@
-<p>
-	<strong>Title:</strong>
-	<%= @post.title %>
-</p>
 
-<p>
-	<strong>Text:</strong>
-	<%= @post.text %>
-</p>
+<div class="blog-post">
+	<h2 class="blog-post-title"><%= @post.title %></h2>
+    <p class="blog-post-meta"><%= @post.created_at %></p>
+    
+    <p><%= @post.text %></p>        
+</div><!-- /.blog-post -->
+
 
 <h2>Comments</h2>
 <%= render @post.comments %>
