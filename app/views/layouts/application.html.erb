@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Software Development Musings</title>
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
-		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-		<%= csrf_meta_tags %>
-	</head>
-	<body>
+  <head>
+    <title>Software Development Musings</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-		<div class="navbar navbar-inverse" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Rowan</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="/">Home</a>
-						</li>
-						<li>
-							<a href="#about">About</a>
-						</li>
-						<li>
-							<a href="#contact">Contact</a>
-						</li>
-						<li>
-							<a href="#">Login</a>
-						</li>
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</div>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Rowan</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <% if session[:current_user] != nil %>
+                <a href="<%= url_for :logout %>">Logout</a>
+              <% else %>
+                <a href="<%= url_for :login %>">Login</a>
+              <% end %>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
 
-		<div class="container">
+    <div class="container">
 
-			<div class="blog-header">
-				<h1 class="blog-title">Software Development Musings</h1>
-				<p class="lead blog-description">
-					Ramblings of a software engineer.
-				</p>
-			</div>
+      <div class="blog-header">
+        <h1 class="blog-title">Software Development Musings</h1>
+        <p class="lead blog-description">
+          Ramblings of a software engineer.
+        </p>
+      </div>
 
-			<div class="row">
+      <div class="row">
 
-				<div class="col-sm-8 blog-main">
-					<%= yield %>
-				</div>
+        <div class="col-sm-8 blog-main">
+          <%= yield %>
+        </div>
 
-			</div><!-- /.row -->
+      </div><!-- /.row -->
 
-		</div><!-- /.container -->
+    </div><!-- /.container -->
 
-		<div class="blog-footer">
-			<div class="container">
-				<p>
-					Built with Bootstrap and Ruby on Rails.
-				</p>
-				<p>
-					<a href="#">Back to top</a>
-				</p>
-			</div>
-		</div>
+    <div class="blog-footer">
+      <div class="container">
+        <p>
+          Built with Bootstrap and Ruby on Rails.
+        </p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </div>
+    </div>
 
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	</body>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
 </html>

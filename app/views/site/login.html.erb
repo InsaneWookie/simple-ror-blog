@@ -1,6 +1,6 @@
 <h1>Login</h1>
-
-<form action="<%= url_for :trylogin %>">
-	<input type="text" name="username" />
-	<input type="password" name="password" />
-</form>
+<%= form_tag url_for :controller => "site", :action => "login_post" do %>
+  <input type="text" name="username" />
+  <input type="password" name="password" />
+  <input type="submit" />
+<% end %>

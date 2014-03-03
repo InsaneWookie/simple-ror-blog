@@ -2,9 +2,9 @@
 
 one:
   #id: 1
-  username: MyString
-  password_digest: MyString
-  email: MyString
+  username: test
+  password_digest: $2a$10$Didb97JLCV5kDXW24lfoVeL3AlHuyGEU8UExVDjUD2ALoyd7pdVG6
+  email: test@test.com
 
 two:
   #id: 2

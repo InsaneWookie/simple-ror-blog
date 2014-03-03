@@ -1,6 +1,6 @@
 SleepySavannah7126::Application.routes.draw do
   
-  get "site/index"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -59,6 +59,12 @@ SleepySavannah7126::Application.routes.draw do
   #root 'welcome#index'
 
   # SleepySavannah7126::Application.routes.draw do
+
+  get "site/index"
+  get "login" => "site#login"
+  get "logout" => "site#logout"
+  post "login_post" => "site#login_post"
+  
 
   resources :users
   
