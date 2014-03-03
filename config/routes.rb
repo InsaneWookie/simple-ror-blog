@@ -1,5 +1,6 @@
 SleepySavannah7126::Application.routes.draw do
-  get "welcome/index"
+  
+  get "site/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,18 +55,19 @@ SleepySavannah7126::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  
+
   #root 'welcome#index'
 
-    
-  SleepySavannah7126::Application.routes.draw do
- 
-    resources :posts do
-      resources :comments
-    end
-   
-    root to: "welcome#index"
-    
-  end
+  # SleepySavannah7126::Application.routes.draw do
+
+  resources :users
   
+  resources :posts do
+    resources :comments
+  end
+
+  root to: "site#index"
+
+#end
+
 end
