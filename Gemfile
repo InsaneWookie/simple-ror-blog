@@ -49,4 +49,7 @@ gem 'unicorn'
 #required for heroku
 gem 'rails_12factor', group: :production
 
+#required for coveralls code coverage 
+gem 'coveralls', require: false
+
 ruby "2.1.1"
