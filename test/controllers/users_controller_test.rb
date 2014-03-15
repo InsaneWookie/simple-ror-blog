@@ -3,9 +3,11 @@ require 'test_helper'
 class UsersControllerTest < ActionController::TestCase
   setup do
     @user = users(:one)
+    session[:current_user_id] = @user.id #auth the user
   end
 
   test "should get index" do
+    
     get :index
     assert_response :success
     assert_not_nil assigns(:users)
@@ -17,7 +19,7 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should create user" do
-    assert_difference('User.count') do
+    assert_difference('User.count') do      
       post :create, user: { email: "email@email.com", password: "password", password_confirmation: "password", username: "username" }
     end
 

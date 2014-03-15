@@ -65,6 +65,8 @@ SleepySavannah7126::Application.routes.draw do
   get "logout" => "site#logout"
   post "login_post" => "site#login_post"
   
+  get "contact" => "site#contact"
+  get "about" => "site#about"
 
   resources :users
   
@@ -72,7 +74,7 @@ SleepySavannah7126::Application.routes.draw do
     resources :comments
   end
 
-  root to: "site#index"
+  root to: "posts#index"
 
 #end
 
